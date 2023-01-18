@@ -1,0 +1,22 @@
+﻿Template Method Pattern
+
+Bir algoritmanın ana yapısını, bazı adımlarını alt sınıflara bırakarak bir fonksiyonda tanımla.
+Template Method, bir algoritmanın yapısını değiştirmeden bazı adımlarının alt sınıflarda tekrar tanımlanmasına imkan sağlar.
+
+Sonuçlar
+Template method ile bir algoritmanın değişken noktaları soyutlanır.
+Template Method kalıbıyla algoritmalar arasındaki ortak noktalar bir üst sınıfta soyutlanır değişen noktalar ise alt sınıflarda yerine getirilir.
+
+bir üst sınıfta metodları yaz alt sınıfların override etmesi gereken metotları absract oalrak tanımla. Bu base yani template clası implement eden
+alt sınıflar bu absract metotların içini doldursun
+
+Template method kalıbı strategy kalıbı ile karıştırılabilir.
+Aralarındaki en temel fark Strategy'de tüm algoritmal detayını alt sınıflara bırakılmasına karşın Template method'ta algoritmanın iskeleti ve
+belki bazı adımları belirlenmekte ve diğer bazı adımları alt sınıflara bıraklılmaktadır.
+Strategy'de algoritma belli değildir. Template Methodda ise bazı adımlarının detayı dışında algoritma bellidir.
+
+Strategy Design Pattern‘i davranışın tamamen değiştiği durumlarda,
+Template Method Design Pattern’i ise davranışın bir kısmı değiştiği durumlarda kullanılır.
+Burada dikkat etmemiz gereken nokta, Strategy Design Pattern ile fazladan aynı işi yapacak olan algoritmik çalışma gerçekleştirmektense, 
+var olan kod parçalarının yeniden kullanılabilirliğinin arttırılmasında(Code Reusability) da tercih edildiği görülmektedir.
+Yani Strategy ile yazılmıs kodda refactoring yaparak template metoda dönüşebiliriz
